@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <body>
+    <!-- <h1 id="mainhead" class="main-heading">Welcome </h1>
+    
+      <button id="btn" class="btn-1 ">Click </button>
+      <table border="1">
+        <tr><th> student ID</th><th> Name</th><th> Marks</th></tr>
+        <tbody id="tablebody">
+
+        </tbody>
+
+      </table>
+       -->
+<!-- 
+        <h1 id="heading">Calculator</h1>
+        <label for="name">Enter first number</label>
+        <input type="text" id="name" placeholder="Enter first number">
+        <label for="name2">Enter second number</label>
+        <input type="text" id="name2" placeholder="Enter second number">
+        <button id="btn" class="btn-1">Add</button>
+        <button id="btn2" class="btn-2">Subtract</button>
+        <div id="result"></div>
+        <div id = "result2"></div> -->
+
+
+
+<! -- creating a label enter name near it add name and after tadding that it will show one reo in that student name then count and action if we added anyone then is will add a row below him the name and count is 0 and in action vote button and when we click vote of perticular name the count wants to increaseand multple name can be added one by one -->
+        <h1 id="heading">Vote Counter</h1>
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" placeholder="Enter name">
+        <button id="btn" class="btn-1">Add Name</button>
+
+        <table border="1">
+            <tr><th> Name</th><th> Count</th><th> Action</th></tr>
+            <tbody id="tablebody">
+
+            </tbody>
+
+
+          </table>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <script>
+        
+       //     prompt("What is your name?");
+         //   prompt("What is their name ?");
+         //   var lovescore= Math.random() * 100;
+        //    lovescore = Math.floor(lovescore) + 1;
+       //     alert("Your love score is " + lovescore + "%");
+       //     if (lovescore > 70) {
+      //          alert("You love each other like Kanye loves Kanye.");
+      //      } else if (lovescore > 30) {
+       //         alert("You go together like Coke and Mentos.");
+         //   } else {
+           //     alert("You are alright together.");
+            
+            // }
+// making a calculator by arrow and a normal function of additiona and subtraction
+
+// let myfun = x=> x +x;
+
+ //let temp=myfun(5);
+ //alert(temp); 
+
+ 
+
+//function myfun2()
+//{
+  //  console.log("This is callback function");}
+    //function myfun1(callback1)
+    //{
+      //  console.log("I am going to finish my work");
+        //callback();
+   // }
+    //myfun1(myfun2);
+   
+    //<! -- creaing array and using filrer and map method in it -- >
+    //let arr = [1,2,3,4,5,6,7,8,9,10];
+    //let newarr = arr.filter((x) => {
+      //  return x > 5;
+//});
+  //  console.log(newarr);  
+    //let newarr2 = arr.map((x) => {
+      //  return x * 2;
+//});
+  //  console.log(newarr2);
+
+
+  //  let obj = { name: "Hardik",age: 21,marks: [10, 20, 30],address: {city: "Pune",state: "Maharashtra"}};
+   // console.log(obj);
+  //  console.log(obj.name);
+  //  console.log(obj.address.city);
+   // console.log(obj.marks[1]);    
+
+
+//let arr1=[1,2,3];
+//let arr2=[4,5,6];
+//let arr3=[...arr1, ...arr2];
+//console.log(arr3);
+
+//let obj={id:1, name:"Hardik",marks:90};
+//obj.address="Kopargaon";
+//for( let k in obj)
+//{
+  //  console.log(K);
+  //  console.log(obj[k]);
+//}
+
+
+
+//let x=document.querySelector("#heading");
+//console.log(x);
+//let y=document.querySelectorAll(".sub-heading");
+//console.log(y);
+//let z=document.getElementsByClassName("main-heading");
+//console.log(z);
+
+        
+
+//document.querySelector("#btn").addEventListener("click", function() {
+  //let x=document.getElementById("tablebody");
+  //let row = document.createElement("tr");
+
+ // let cell = document.createElement("td");
+  //cell.textContent = "1";
+ // row.append(cell);
+
+//cell = document.createElement("td");
+  //cell.textContent = "abc";
+//  row.append(cell);
+
+  //cell = document.createElement("td");
+  //cell.textContent = "90";
+  //row.append(cell);
+
+
+  //x.append(row);
+
+//});
+
+
+
+//let objarr=[{id:1, name:"He",marks:90},{id:2, name:"she",marks:80}];
+//for( let i=0; i<objarr.length; i++)
+//{
+ // for (let key in objarr[i]) {
+  //  console.log(key + ": " + objarr[i][key]);
+  //}
+
+//}
+
+
+//document.querySelector("#btn").addEventListener("click", function() {
+  //  let num1 = parseFloat(document.getElementById("name").value);
+  //  let num2 = parseFloat(document.getElementById("name2").value);
+  //  let result = num1 + num2;   
+  //  document.getElementById("result").textContent = "Addition Result: " + result;
+//});
+//document.querySelector("#btn2").addEventListener("click", function() {
+  //  let num1 = parseFloat(document.getElementById("name").value);
+    //let num2 = parseFloat(document.getElementById("name2").value);
+    //let result2 = num1 - num2;
+    //document.getElementById("result2").textContent = "Subtraction Result: " + result2;
+//});
+
+document.querySelector("#btn").addEventListener("click", function() {
+    let name = document.getElementById("name").value;
+  
+    let tableBody = document.getElementById("tablebody");
+    let row = document.createElement("tr");
+    let cellName = document.createElement("td");  
+    cellName.textContent = name;
+
+    row.appendChild(cellName);
+    let cellCount = document.createElement("td");
+    cellCount.textContent = "0";
+    row.appendChild(cellCount);
+    
+    let cellAction = document.createElement("td");
+    let voteButton = document.createElement("button");
+    voteButton.textContent = "Vote";
+    voteButton.addEventListener("click", function() {
+
+        let currentCount = parseInt(cellCount.textContent);
+        cellCount.textContent = currentCount + 1;
+    });
+    cellAction.appendChild(voteButton);
+    row.appendChild(cellAction);
+    tableBody.appendChild(row);
+    document.getElementById("name").value = ""; // Clear input field
+
+});
+
+
+
+
+
+           
+
+        </script>
+
+    </body>
+</html>
+

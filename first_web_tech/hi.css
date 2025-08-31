@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #e3d1d1;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navlink a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#toggle {
+    display: none;
+}
+
+#togglelabel {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 14px 16px;
+    background-color: #e3d1d1;
+}
+
+@media (max-width: 600px) {
+    .navlink a {
+        display: none;
+    }
+    #togglelabel {
+        display: block;
+    }
+    .navlink {
+        width: 100%;
+        flex-direction: column;
+    }
+    #toggle:checked ~ .navlink a {
+        display: block;
+        position: absolute;
+        top: 50px;
+    }
+}

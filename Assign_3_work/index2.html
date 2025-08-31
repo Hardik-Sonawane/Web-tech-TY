@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+
+
+<table id="myTable"  >
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Completed</th>
+    </tr>   
+</table>
+
+
+
+
+
+<script>
+function getdata() {                                                                       
+    fetch("https://jsonplaceholder.typicode.com/todos")
+        .then((response) => {
+            console.log("Data is received");
+            return response.json();
+        })
+        .then((result) => {
+            console.log(result); 
+            let table = document.getElementById("myTable");
+
+            result.forEach(item => {
+                let row = table.insertRow();
+
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+
+                cell1.textContent = item.id;
+                cell2.textContent = item.title;
+                cell3.textContent = item.completed ? "Yes" : "No";
+            });
+        })
+        .catch((e) => {
+            console.error("Error fetching data:", e);
+        });
+}
+
+getdata();
+</script>
+
+</body>
+</html>
+
+    

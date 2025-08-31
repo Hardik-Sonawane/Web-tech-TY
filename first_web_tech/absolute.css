@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.box {
+  width: 150px;
+  height: 100px;
+  background-color: pink;
+  margin: 10px;
+  border: 2px solid red;
+}
+
+.absolute {
+  position: absolute;
+  top: 20px;
+  left: 9px;
+}
